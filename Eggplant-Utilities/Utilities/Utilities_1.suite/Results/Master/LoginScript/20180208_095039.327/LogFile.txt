@@ -1,0 +1,10 @@
+﻿2018-02-08 09:50:39.343 +0530	START		Running Master/LoginScript.script	1	on_master_masterscript	Master/MasterScript.script<SELECTION>
+2018-02-08 09:50:39.408 +0530	typetext		[windowsKey]r	3	on_master_loginscript	Master/LoginScript.script
+2018-02-08 09:50:39.792 +0530	waitfor	Notepad/Open	found at (148, 872)	4	on_master_loginscript	Master/LoginScript.script
+2018-02-08 09:50:40.176 +0530	typetext		[backspace]	5	on_master_loginscript	Master/LoginScript.script
+2018-02-08 09:50:41.223 +0530	typetext		Notepad.exe[returnKey]	6	on_master_loginscript	Master/LoginScript.script
+2018-02-08 09:50:41.692 +0530	imagefound	Notepad/UntitledNotepad	found at (125, 46)	9	on_master_loginscript	Master/LoginScript.script
+2018-02-08 09:50:42.809 +0530	typetext		Hello Everyone have a good day	10	on_master_loginscript	Master/LoginScript.script
+2018-02-08 09:50:42.909 +0530	capturescreen	Notepad Application Screen launched.png		11	on_master_loginscript	Master/LoginScript.script
+2018-02-08 09:50:42.909 +0530	EndTestCase		(Duration:"3.566", Errors:"0", Exceptions:"0", StartTime:"2018-02-08 09:50:39 +0530", Successes:"1", TestCase:"Master/LoginScript.script", Warnings:"0")	1	on_master_masterscript	Master/MasterScript.script<SELECTION>
+2018-02-08 09:50:42.963 +0530	SUCCESS		Execution Time 0:00:03 Master/LoginScript.script	1	on_master_masterscript	Master/MasterScript.script<SELECTION>

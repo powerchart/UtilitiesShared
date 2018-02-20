@@ -1,0 +1,21 @@
+﻿on house
+	log "entering the house" 
+end house
+
+on door
+	log "opening the door"
+end door
+
+on window
+	log "seeing through the window"
+end window
+
+on runaway
+	log "come out of the house"
+end runaway
+
+
+To handle addfunction a,b
+	put (a+b) into add1
+	return add1
+End addfunction

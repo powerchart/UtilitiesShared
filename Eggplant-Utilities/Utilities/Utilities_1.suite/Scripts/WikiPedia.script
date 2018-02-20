@@ -1,0 +1,181 @@
+﻿Global BrowserName, BrowserURL, SearchBook,SeasonNo, DirectedBy, Rating
+
+put file ResourcePath("wikipedia.csv") into datasource
+put (the number of lines of datasource)-1 into dataRowCount
+log dataRowCount
+put the number of items of dataRowInfo into dataSetRowInfo
+
+Repeat dataRowCount times
+	put line (repeatindex()+1) of datasource into dataRowInfo
+	
+	Repeat dataSetRowInfo times
+		Put item repeatIndex() of dataRowInfo into BrowserName
+		Put item repeatIndex()+1 of dataRowInfo into BrowserURL
+		Put item repeatIndex()+2 of dataRowInfo into SearchBook
+		Put item repeatIndex()+3 of dataRowInfo into SeasonNo
+		Put item repeatIndex()+4 of dataRowInfo into DirectedBy
+		Put item repeatIndex()+5 of dataRowInfo into Rating
+		//log BrowserName && BrowserURL && SearchBook && SeasonNo && DirectedBy && Rating
+		
+		Waitfor 5,BrowserName
+		DoubleClick BrowserName
+		Wait 2
+		TypeText BrowserURL,returnKey
+		
+		Waitfor 5,"WikiPage/WikiSearch"
+		Click "WikiPage/WikiSearch"
+		
+		TypeText SearchBook,returnKey
+		
+		If ImageFound(5, (text:SearchBook)) then
+			LogSuccess SearchBook && "Page found successfully"
+			CaptureScreen (Name: SearchBook)
+		End If
+		
+		Wait 2
+		TypeText controlKey & f 
+		TypeText  "Ratings" & escapeKey
+		Wait 5
+		
+		//TypeText tabKey,tabKey
+		Click "WikiPage/Production"
+		Click text:"Ratings",searchRectangle:((14,95,711,685))
+		Wait 5
+		set the searchRectangle to ()
+		
+		Click "WikiPage/Title"
+		
+		
+		put ImageLocation(image:"WikiPage/Title") into AP
+		
+		//To read a single element in the grid
+		(*insert AP+(-1,4) into SR
+		insert AP+(135,50) into SR*)
+		
+		//Read the entire grid column information
+		insert AP+(-1,4) into SR
+		insert AP+(135,494) into SR
+		
+		Log Readtext(SR)
+		
+		Put ImageLocation(Text :"The Proposal Proposal",searchRectangle:(SR),textDifference:1) into value1
+		Set the searchRectangle to ()
+		insert value1+(270,-20) into SR1
+		Insert value1+(175,28) into SR1
+		log ReadText(SR1)
+		
+		
+		TypeText altKey & f4
+		
+		//set the searchRectangle to ()
+		Put () into dataRowInfo
+	End Repeat
+	
+End repeat
+
+(*
+
+Put item 1 of dataRowInfo into BrowserName
+log BrowserName
+Put item 2 of dataRowInfo into BrowserURL
+log BrowserURL
+Put item 3 of dataRowInfo into SearchBook
+log SearchBook
+Put item 4 of dataRowInfo into SeasonNo
+log SeasonNo
+Put item 5 of dataRowInfo into DirectedBy
+RunWithNewResults "￹scriptName￺TP-EPF-TOKEN￻", ￹optionalParam1￺TP-EPF-TOKEN￻, ￹optionalParam2￺TP-EPF-TOKEN￻
+log DirectedBy
+Put item 6 of dataRowInfo into Rating
+log Rating
+//log Rating&"asdas"&DirectedBy
+
+	log "BrowserName:" && BrowserName
+	Log "BrowserURL:" && BrowserURL
+
+
+*)
+
+
+
+
+
+(*
+repeat forever                                       //Loop until told to stop
+	read from file FileName until return //Read each line of the file into the 'it' variable until you reach the end of the line
+	if it is empty then exit repeat           //if the line is empty you have reached the end of the file so stop reading
+	
+	set variableName to item 1 of it       //Set the variable name to the value in Column A of the current line
+	set VariableValue to item 2 of it       //Set the variable value to the value in Column B of the current line
+	do !"set " & variableName & " to " & VariableValue           //Set the variable using the name and value extracted from the file
+	
+end repeat                                           //Read the next line - go back to the begining of the repeat loop
+
+close file FileName*)
+
+
+(*
+set FileName to ResourcePath("wikipedia.csv")
+open file FileName for reading
+*)
+
+
+(*
+//***************************************Excel Database connection***********************************
+
+set myExcelDB to (type: "excel", file: ResourcePath("wikipedia.xlsx"),writable: Yes)
+put the records of myExcelDB into states
+
+log states
+
+set ExcelFile to Workbook(ResourcePath("wikipedia.xlsx"))
+
+
+
+
+
+
+
+
+
+
+
+
+set worksheet1 to worksheet(ResourcePath("wikipedia.xlsx"), 1)
+
+//set the cellType of worksheet1.cell("A3") to "firefox"
+put "firefox" into worksheet1.cell("A3")
+*)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

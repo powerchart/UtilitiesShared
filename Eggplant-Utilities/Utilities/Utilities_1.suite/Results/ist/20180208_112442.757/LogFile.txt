@@ -1,0 +1,6 @@
+﻿2018-02-08 11:24:42.767 +0530	START		Running ist.script
+2018-02-08 11:24:42.945 +0530	Log		John	13	on_ist	ist.script
+2018-02-08 11:24:42.965 +0530	Log		gego	13	on_ist	ist.script
+2018-02-08 11:24:42.982 +0530	Log		Manju	13	on_ist	ist.script
+2018-02-08 11:24:43.346 +0530	EndTestCase		(Duration:"0.511", Errors:"0", Exceptions:"0", StartTime:"2018-02-08 11:24:42 +0530", Successes:"1", TestCase:"ist.script", Warnings:"0")
+2018-02-08 11:24:43.513 +0530	SUCCESS		Execution Time 0:00:01 ist.script

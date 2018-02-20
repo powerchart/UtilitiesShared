@@ -1,0 +1,7 @@
+﻿Run "Master/LoginScript"
+
+RunWithNewResults "Master/LoginScript"
+
+if the result's status is "failure" then
+	LogError "Notepad application is not launched successfully"
+end if

@@ -1,0 +1,477 @@
+﻿//Manju Bhaskar
+//Dec 04-2017
+
+Log "Start scrip"
+
+//StartMovie "Opening Amazon"
+
+DoubleClick "Chrome Folder/Chrome Icon"
+Click "Address Bar"
+TypeText "www.amazon.com", returnKey
+WaitFor 8.0, "Amazon Search"
+
+//If else statement
+if ImageFound("Amazon Search")
+	//Log "found it"
+	LogSuccess "Found it" //for validations
+	
+else 
+	LogWarning "didn't find it"
+	//LogError "￹errorMessage￺TP-EPF-TOKEN￻"
+	
+end if
+
+//Record this info to check for how much time take to perform one action - timer validation
+BeginTestCase "Amazon Search"
+WaitFor 8.0, "Amazon Search"
+EndTestCase "Amazon Search" 
+
+Log "Amazon has been open"
+
+//Pausescript
+
+Click "DepartmentScrollDown"
+TypeText pagedown,pagedown
+Click "MoviesTv"
+Click "MoviesTV_SearchBox"
+TypeText "The Big Bang Theory - Seasons", returnkey
+
+
+//Click "The Big Bang Therory: The Complete Tenth Season"
+TypeText pagedown,pagedown,pagedown,pagedown,pagedown,pagedown,pagedown
+Click "TheBiqBangTheoryTheCompleteTen"
+
+//Click 2nd Instance of DVD
+Click "DVD_Second Instance"
+
+//Scroll down until you fine "Customers who bhought this item" text
+TypeText pagedown,pagedown,pagedown,pagedown,pagedown
+Click "customerswhobought"
+CaptureScreen (Name: "Customers Info")
+
+//StopMovie
+
+//TypeText windowsKey & "r"
+
+
+// Variables and ORC (x acts as a variable)
+
+
+TypeText x+1
+
+put "APHA" into last_Name
+put "TEST" into first_Name
+
+Typetext last_Name, ",", first_Name
+
+put controlKey & x into first_Name
+
+TypeText controlKey & a
+
+TypeText first_Name
+
+
+
+put first_name&laste_name into middle_name
+
+TypeText middle_name
+TypeText last_Name & " " & first_Name
+
+// && adds a space b/w texts
+
+TypeText "hello"&& "APHA"
+
+put "Chrome Folder/Chrome Icon" into Browser
+DoubleClick Browser
+log "the browser that is clicked" && Browser
+
+put 30 into wait_for_value
+waitfor wait_for_value,Browser
+
+
+--set browse to "Chrome Folder/Chrome Icon"
+
+Put 5 into x
+put 7 into y
+
+if (x>Y) then
+	log "x is greter than y" && x
+	TypeText x
+	
+else
+	Log "y is greater than x" && Y
+	TypeText y
+	
+end if 
+
+
+//Lists of values in variables
+
+Put ("apple","biscuits","Milk") into grocery_list
+TypeText grocery_list
+
+TypeText item 1 of grocery_list
+
+TypeText item 1 of grocery_list && item 2 of grocery_list
+
+Log items 1 to 2 of grocery_list
+TypeText returnKey
+
+Put (grocery_list, grocery_list) into grocery_list
+
+TypeText grocery_list
+TypeText returnKey
+TypeText item 1 of grocery_list
+
+
+Put ("apple","biscuits","Milk","Milk") into grocery_list
+put standardformat(grocery_list) into gro1
+typetext gro1
+TypeText returnKey
+put value(gro1) into grocery_list
+TypeText grocery_list
+
+
+put the number of items in grocery_list into count
+TypeText returnKey
+TypeText count
+
+Repeat Count times
+	log item repeatindex() of grocery_list
+end repeat 
+
+// to find image location
+put ImageLocation("Chrome Folder/Chrome Icon") into xyCor
+Log xyCor
+
+put ImageLocation(Text:"Link") into xyCor
+
+Log xyCor
+
+// Repeate option
+
+put 5 into max
+put 1 into Index
+
+Repeat max times
+	
+	TypeText "Manju"
+	TypeText returnKey
+	Put Index+1 into Index
+	If Index = 4 then
+		log "log found at four stopped" && Index
+		exit repeat
+	End If
+End repeat
+
+Repeat until ImageFound("TheBiqBangTheoryTheCompleteTen")
+	TypeText pagedown
+	
+	if ImageFound("amazonEnglishUnitedStates")
+		LogError "unable to find image"
+		Exit script
+	end if
+End repeat
+
+Click "TheBiqBangTheoryTheCompleteTen"
+
+
+//OCR - optical character recognition
+click text:"chrome"
+
+log EveryImageLocation("Notepad")
+
+ImageLocation(Image:"YourAmazoncom12DaysofDealsGift_1", WaitFor:33)
+
+//Search Rectangle
+
+click image:"Toy",searchRectangle:("top1","bottom2")
+
+click text:"Try Prime",searchRectangle:(960,107,1202,273)
+
+Set the SearchRectangle to ("UpperRight_A","UpperRight_B")
+
+Put RemoteScreenSize() into Var
+log var
+put var * (0.5,0.5) into var2
+log var2
+
+click image:"Amazon Search",searchRectangle:((0,0),RemoteScreenSize())
+
+click image:"Amazon Search"
+
+click "Amazon Search"
+
+log ReadText((72,442,426,493))
+
+log ReadText((5,108,1253,982))
+
+Log  RemoteClipboard()
+
+
+//*******Selecting an Item in Tree**************************************
+Click text
+Set the SearchRectangle to ("dispenseCategory_A","dispenseCategory_B")
+
+
+Set the SearchRectangle to ("DispenseCategory1_A","DispenseCategory1_B")
+Click Text:"APHA_DC1"
+
+Click (Text:"APHA_DC1")
+
+Set the SearchRectangle to ((273,238,433,852))
+
+(*Repeat while ReadText("CHEMO med") is true
+	pageDown
+End repeat*)
+Click (text:"Dispense Category", WaitFor:123)
+repeat until ImageFound((text:"UD LIQ", validcharacters:"*")) //* - represents regular expressions 
+	//	ImageFound((text:"CHEMO med"))
+	typetext pageDown	
+end repeat
+Click (Text:"UD LIQ", validcharacters:"*") 
+
+//********Execution takes 5 mins for executions*****
+
+
+Click text:"APHA_DC1",searchRectangle:((273,238,433,852))
+
+log ReadText((273,238,433,852))
+
+MoveTo "Dispense Category"
+Click "DispenseCateogy_new"
+
+//*****************Other Scenario to select dispense category*********
+
+Put "ABC" into DC_Name
+
+Repeat until ImageFound("DispenseCategory/DispenseCateogy_new")
+	TypeText pageup
+End repeat
+
+TypeText DC_Name
+
+
+typetext downArrow
+click ImageLocation("Abbreviation_Name")
+typetext controlKey & homekey & shiftkey & endKey & controlKey & c
+
+put RemoteClipboard() into clipboardtext
+log clipboardtext
+
+Repeat until DC_Name = clipboardtext
+	typetext tab & tab & tab
+	typetext downArrow
+	click ImageLocation("Abbreviation_Name")
+	typetext controlKey & homekey & shiftkey & endKey & controlKey & c
+	put RemoteClipboard() into clipboardtext
+	if clipboardtext = tempvalue then
+		exit repeat
+	end if 
+	put clipboardtext into tempvalue
+End repeat
+
+
+
+click ImageLocation("Abbreviation_Name")
+typetext controlKey & homekey & shiftkey & endKey & controlKey & c
+log RemoteClipboard()
+
+ImageInfo()
+RepeatUntil text:DC_name
+
+End Repeat
+
+put ImageLocation(image:"DispenseCategory/DispenseCateogy_new") into AP
+
+
+insert AP+(-50,10) into SR
+insert AP+(200,570) into SR
+
+Put readtext(SR) into value1
+log item 1 of value1
+
+Repeat until ImageFound(text:DC_Name,searchRectangle:(SR))
+	typetext pageDown
+End Repeat
+click text:DC_Name, searchRectangle:(SR)
+
+Put "APHA_DC1" into DC_Name
+Repeat until value1 = DC_Name 
+	put readtext("Abbreviation_Name") into value1
+	log value1
+	typetext downArrow
+End repeat
+Set the SearchRectangle to ("abb_Rec_A","abb_Rec_B")
+Log ReadText((724,240,1154,270))
+(*
+if value1 not equal DC_Name then
+	typetext downArrow"Abbreviation_Name"
+end if*)*)
+
+//******************Grid Executions in Phamedmgr applciation ***********************
+
+(Image:"Grid", WaitFor:11.5), "Grid_dropdown"
+
+
+put EveryImageLocation("Grid_dropdown") into G_Dropdown
+//log G_dropdown
+
+put the number of items of G_Dropdown into count
+//log count
+
+put 1 into flag
+
+Repeat Count times	(Image:"OrderSentence", WaitFor:4.3)
+	Click items flag of G_Dropdown
+	Click items flag of G_Dropdown
+	put flag+1 into flag
+End repeat
+
+
+//perform void action on each product
+Put "Copy" into action
+
+put EveryImageLocation("Grid_dropdown") into G_Dropdown
+put the number of items of G_Dropdown into count
+put 1 into flag
+Repeat Count times
+	Click items flag of G_Dropdown
+	TypeText "Copy"
+	(*if action = "Copy"
+		TypeText "Copy"
+	end if
+	//Typetext A*)
+	Click items flag of G_Dropdown
+	put flag+1 into flag
+End repeat
+
+Put "amantadine" into orderable
+
+click OrderSentence
+
+put ImageLocation(image:"OrderSentence") into AP
+insert into 
+
+
+
+
+//********Repeat 
+
+Log "start script"
+
+repeat until imagefound(6,"OrderSentence",searchRectangle(1,2,3,4))
+	//repeat until imagefound(6,image:"OrderSentence",searchRectangle(1,2,3,4))
+	typetext pagedown
+	
+	log "paging down"
+	
+	//how to exit the repeat
+	if imagefound(2, "ConditionsofUse") then
+		LogError "hit bottom"
+		exit repeat
+		exit script		
+end repeat
+
+Log "End Script"
+
+wait 2
+waitfor 30, image:"OrderSentence"
+waitfor 30, FoundImageLocation()
+click FoundImageLocation()
+
+
+// Creating global variables
+put "something" into global var1
+
+
+//second instance of text
+put item 2 of EveryImageLocation((Text:"textnamee"))
+
+
+//*******Phamedmgr Demographics Panner****
+
+put ImageLocation(text:"MRN:") into AP
+log AP
+insert AP+(-26,-10) into SR
+insert AP+(790,52) into SR
+log ReadText(SR)
+
+
+//put EveryImageLocation("Plus_Con, "comment_Icon", ") into icons
+Put the number of items of icons into icon_Count
+Repeat icon_Count times
+	
+	put item repeatindex() of icons into xyCor
+	MoveTo xyCor
+	Wait 2
+	
+end repeat
+
+
+
+
+//****Sending an email*******
+SendMail (To:"manju.bhaskar@cerner.com", Subject:"Test", Message:"Passed", From:"test@eggplant.com")
+
+RunWithNewResults simplescript
+set currentResult to the result
+
+log currentResult.status
+log currentResult.Duration
+
+put 14 into var1
+put 7 into var2
+log var1 multiplied by var2
+
+
+//*******Class practice*************
+
+Put EveryImageLocation("ZipIcon") into iLocations
+put the numbers of items of iLocations into imagecount
+log imagecount
+
+
+
+Put ImageFound(2, "ZipIcon") into iLocation
+log iLocation
+
+Put ImageInfo("ZipIcon") into iInfo
+Log iIn
+
+
+
+(￹firstItem￺TP-EPF-TOKEN￻,￹seconditem￺TP-EPF-TOKEN￻,￹thirdItem￺TP-EPF-TOKEN￻)
+(￹key1￺TP-EPF-TOKEN￻:￹value1￺TP-EPF-TOKEN￻, ￹key2￺TP-EPF-TOKEN￻:￹value2￺TP-EPF-TOKEN￻)
+
+put the width of (shape:"oval",height:"12",width:16) into a
+log a
+
+
+put (a:"1",b:"2",C:"3") into num_list
+
+put the a of num_list into a_value
+log a_value
+put the number of items of num_list into num_Count
+log num_Count
+
+log item 1 of num_list
+
+BeginTestCase "hi"
+wait 8,"text"
+EndTestCase
+
+//***********Date formate************
+
+log date //logs date in MM/DD/YY
+log long date
+
+put the year into currentYear
+log year
+
+selectDateFromCalendar "10/12/2016"
+set currentnYear to the nYear
+log nYear
+
+TypeText "phamedmgr.exe"
+

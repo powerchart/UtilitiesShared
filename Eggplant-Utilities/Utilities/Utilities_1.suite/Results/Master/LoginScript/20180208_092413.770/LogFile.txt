@@ -1,0 +1,4 @@
+﻿2018-02-08 09:24:13.770 +0530	START		Running Master/LoginScript.script	1	on_master_masterscript	Master/MasterScript.script<SELECTION>
+2018-02-08 09:24:13.786 +0530	Exception		Remote Connection Unavailable	3	on_master_loginscript	Master/LoginScript.script
+2018-02-08 09:24:13.802 +0530	EndTestCase		(Duration:"0.016", Errors:"1", Exceptions:"1", StartTime:"2018-02-08 09:24:13 +0530", Successes:"0", TestCase:"Master/LoginScript.script", Warnings:"0")	1	on_master_masterscript	Master/MasterScript.script<SELECTION>
+2018-02-08 09:24:13.855 +0530	FAILURE		No Remote Connection typetext Error - Remote Connection Unavailable -- Execution Time 0:00:00 Master/LoginScript.script	1	on_master_masterscript	Master/MasterScript.script<SELECTION>

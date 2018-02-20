@@ -1,0 +1,21 @@
+﻿//Launch Notepad application and Typetext
+
+TypeText windowsKey & r
+WaitFor 10, "Notepad/Open"
+TypeText backspace
+TypeText "Notepad.exe" & returnkey
+
+
+if ImageFound(15, "Notepad/UntitledNotepad") then 
+	TypeText "Hello Everyone have a good day"
+	CaptureScreen (Name: "Notepad Application Screen launched")
+	
+Else
+	LogError "Notepad didn't launch"
+	
+end if
+
+
+
+
+

@@ -1,0 +1,9 @@
+﻿put 5.566+6.999 into var1
+put 8 into var2
+
+log var1 plus var2
+
+
+set the defaultNumberFormat to "0.000"
+log one plus five 
+

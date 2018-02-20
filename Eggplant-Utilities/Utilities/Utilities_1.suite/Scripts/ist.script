@@ -1,0 +1,35 @@
+﻿//OCR
+Click (Text:"Chrome")
+
+put 21 into x
+put 10 into y
+
+repeat until x less than 50
+	put x+ y into x
+	log "The value of x:" && x
+end repeat
+
+
+
+
+
+put ("John","gego","Manju") into var1
+//log var1
+//log item 2 of var1
+put the number of items of var1 into count
+//log count
+(*put 1 into flag
+repeat count times
+	log item flag of var1
+	put flag+1 into flag
+end repeat*)
+
+repeat count times
+	log repeatIndex()
+	log item repeatIndex() of var1
+end repeat
+
+
+
+
+

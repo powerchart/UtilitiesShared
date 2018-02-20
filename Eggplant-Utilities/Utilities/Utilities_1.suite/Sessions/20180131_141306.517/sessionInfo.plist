@@ -1,0 +1,26 @@
+{
+    commandList = "[{captureRect:[32, 470, 163, 569], command:@\"Image at\", eventNum:2, hotSpot:[53.989491, 539], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"ggm\", searchType:@\"Smooth\", waitFor:@\"\"}, OCRText:@\"ggm\", screenShotFile:@\"Screen0001.png\", useOCR:@\"NO\"}, {captureRect:[178, 454, 277, 545], command:@\"Image at\", eventNum:3, hotSpot:[225, 533], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"watch\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"Screen0001.png\"}, {captureRect:[1106, 523, 1176, 553], command:@\"Image at\", eventNum:4, hotSpot:[1141, 486], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"image0001\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"Screen0001.png\"}, {captureRect:[367, 184, 439, 232], command:@\"Image at\", eventNum:5, hotSpot:[400, 834], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"image0002\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"Screen0001.png\"}, {captureRect:[77, 231, 98, 254], command:@\"Image at\", eventNum:6, hotSpot:[80, 791], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"image0003\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"Screen0001.png\"}]";
+    generatedCommands = (
+	"Image at \"ggm\"",
+	"Image at \"watch\"",
+	"Image at \"image0001\"",
+	"Image at \"image0002\"",
+	"Image at \"image0003\""
+    );
+    locallyAddedFiles = {
+	"" = (
+	    "ggm.png",
+	    "watch.png",
+	    "image0001.png",
+	    "image0002.png",
+	    "image0003.png",
+	    "ggm.png",
+	    "watch.png",
+	    "image0001.png",
+	    "image0002.png",
+	    "image0003.png"
+	);
+    };
+    sessionType = rapidSession;
+    unnamedImageCount = <*I0>;
+}

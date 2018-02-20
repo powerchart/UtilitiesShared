@@ -1,0 +1,48 @@
+{
+    commandList = "[{captureRect:[14, 608, 61, 655], command:@\"DoubleClick\", eventNum:2, hotSpot:[41, 151], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"Chrome1\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"Screen0002.png\"}, {captureRect:[98, 662, 121, 693], command:@\"Click\", eventNum:6, hotSpot:[148, 89], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"AddressBar1\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"Screen0006.png\"}, {command:@\"TypeText\", eventNum:8, screenShotFile:@\"Screen0008.png\", text:@\"\\\"www.amazon.com\\\",Return\"}, {captureRect:[471, 490, 527, 502], command:@\"Click\", eventNum:38, hotSpot:[751, 273], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"YourAmazoncom12DaysofDealsGift\", searchType:@\"Smooth\", waitFor:@\"5.3\"}, OCRHotSpot:[280, 5], OCRText:@\"Your Amazon.com 12 Days of Deals Gift Cards\", screenShotFile:@\"Screen0038.png\", useOCR:@\"NO\", waitFor:@\"5.3\"}, {captureRect:[353, 311, 423, 341], command:@\"Click\", eventNum:40, hotSpot:[388, 442], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"image0001\", searchType:@\"Tolerant\", waitFor:@\"5.3\"}, screenShotFile:@\"Screen0040.png\", waitFor:@\"5.3\"}, {captureRect:[1013, 578, 1023, 613], command:@\"Drag\", eventNum:42, hotSpot:[1015, 180], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"image0002\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"Screen0042.png\"}, {captureRect:[544, 560, 924, 575], command:@\"Drop\", eventNum:42, hotSpot:[1019, 196], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"ReloadYourBalanceByBrandByOcca\", searchType:@\"Smooth\", waitFor:@\"\"}, OCRHotSpot:[475, 12], OCRText:@\"Reload Your Balance By Brand By Occasion For Businesses\", screenShotFile:@\"Screen0043.png\", useOCR:@\"NO\"}, {captureRect:[1015, 563, 1023, 598], command:@\"Drag\", eventNum:44, hotSpot:[1019, 186], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"image0003\", searchType:@\"Precise\", waitFor:@\"\"}, screenShotFile:@\"Screen0044.png\"}, {captureRect:[989, 595, 1024, 625], command:@\"Drop\", eventNum:44, hotSpot:[1024, 158], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"image0004\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"Screen0045.png\"}, {captureRect:[45, 668, 60, 683], command:@\"Click\", eventNum:46, hotSpot:[52, 95], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"image0005\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"Screen0046.png\"}, {captureRect:[808, 538, 1009, 563], command:@\"Drag\", eventNum:48, hotSpot:[1022, 208], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"12DavsofDeals\", searchType:@\"Smooth\", waitFor:@\"\"}, OCRHotSpot:[214, 22], OCRText:@\"12 Davs of Deals\", screenShotFile:@\"Screen0048.png\", useOCR:@\"NO\"}, {captureRect:[1013, 518, 1023, 575], command:@\"Drop\", eventNum:48, hotSpot:[1021, 243], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"image0006\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"Screen0049.png\"}, {captureRect:[46, 307, 121, 321], command:@\"Click\", eventNum:50, hotSpot:[56, 451], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"UeGiftCard\", searchType:@\"Smooth\", waitFor:@\"\"}, OCRText:@\"U eGiftCard\", screenShotFile:@\"Screen0050.png\", useOCR:@\"NO\"}]";
+    generatedCommands = (
+	"DoubleClick \"Chrome1\"",
+	"Click \"AddressBar1\"",
+	"TypeText \"www.amazon.com\",Return",
+	"Click (Image:\"YourAmazoncom12DaysofDealsGift\", WaitFor:5.3)",
+	"Click (Image:\"image0001\", WaitFor:5.3)",
+	"Drag \"image0002\"",
+	"Drop \"ReloadYourBalanceByBrandByOcca\"",
+	"Drag \"image0003\"",
+	"Drop \"image0004\"",
+	"Click \"image0005\"",
+	"Drag \"12DavsofDeals\"",
+	"Drop \"image0006\"",
+	"Click \"UeGiftCard\""
+    );
+    locallyAddedFiles = {
+	"" = (
+	    "Chrome1.png",
+	    "AddressBar1.png",
+	    "YourAmazoncom12DaysofDealsGift.png",
+	    "image0001.png",
+	    "image0002.png",
+	    "ReloadYourBalanceByBrandByOcca.png",
+	    "image0003.png",
+	    "image0004.png",
+	    "image0005.png",
+	    "12DavsofDeals.png",
+	    "image0006.png",
+	    "UeGiftCard.png",
+	    "Chrome1.png",
+	    "AddressBar1.png",
+	    "YourAmazoncom12DaysofDealsGift.png",
+	    "image0001.png",
+	    "image0002.png",
+	    "ReloadYourBalanceByBrandByOcca.png",
+	    "image0003.png",
+	    "image0004.png",
+	    "image0005.png",
+	    "12DavsofDeals.png",
+	    "image0006.png",
+	    "UeGiftCard.png"
+	);
+    };
+    sessionType = turboSession;
+    unnamedImageCount = <*I0>;
+}

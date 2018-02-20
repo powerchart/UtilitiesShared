@@ -1,0 +1,97 @@
+﻿//Click on particular text on the screen
+Click (Text:"Gift Cards")
+
+
+put ImageLocation("Notepad/TopLeftImage1") into Var1
+
+log ReadText("Notepad/TopLeftImage1")
+
+log Readtext(Var1)
+
+
+Click (Text:"See all deals",ValidCharacters:"*",IgnoreSpaces:"NO")
+
+
+Set the SearchRectangle to ("Rec_A","Rec_B")
+
+
+Set the SearchRectangle to ("Rect2_A","Rect2_B")
+rightClick (Text:"Books")
+Set the searchRectangle to ()
+Set the searchRectangle to empty
+
+
+
+Set the SearchRectangle to ("SR_new_A","SR_new_B")
+RightClick (Text:"Payments &")
+Set the searchRectangle to ()
+
+
+
+
+
+
+//Set the searchRectangle to empty
+
+Set the searchRectangle to ()
+
+log ReadText((180,181,642,219))
+
+Put ImageLocation("All") into iLocation
+log iLocation
+
+insert iLocation+(-20,40)into SR
+insert iLocation+(420,70) into SR
+
+log SR
+log Readtext(SR)
+Wait 3
+
+
+Click (Text:"new", searchRectangle:(0,2,45,56))
+
+
+//reference image to build search rectangle
+put imageLocation("All") into referenceimage
+log referenceimage
+//inserting the x1,y1 into Top left
+insert referenceimage+(-12,39) into SR
+//inserting the x1,y1 into Right Bottom
+insert referenceimage+(450,72) into SR
+//displaying the search rectangle co-ordinates
+log SR
+//reading the text within the search rectangle
+log readtext(SR)
+set the searchRectangle to ()
+//set the searchRectangle to empty
+
+Click (Text:"nothing",searchrectangle:(0,12,34,789))
+
+
+TypeText arrow
+TypeText "￹text￺TP-EPF-TOKEN￻"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

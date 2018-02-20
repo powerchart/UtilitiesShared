@@ -1,0 +1,20 @@
+﻿run "handlers".house
+log the result
+
+run "handlers".door
+run "handlers".window
+run "handlers".runaway
+
+handlers's house
+handlers's door
+handlers's window
+handlers's runaway
+
+log functions.add (2,5)
+put functions.add (2,3) into var
+log var
+
+
+put handlers.addfunction (8,9) into var1
+log var1
+

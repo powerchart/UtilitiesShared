@@ -1,0 +1,20 @@
+﻿(* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  Script generated:  2017-12-05 00:59:04
+  From session:  Amazon
+  Captured on:  2017-12-05 00:56:30
+  From server:  10190227121
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *)
+
+DoubleClick "Chrome1"
+Click "AddressBar1"
+TypeText "www.amazon.com",Return
+Click (Image:"YourAmazoncom12DaysofDealsGift", WaitFor:5.3)
+Click (Image:"image0001", WaitFor:5.3)
+Drag "image0002"
+Drop "ReloadYourBalanceByBrandByOcca"
+Drag "image0003"
+Drop "image0004"
+Click "image0005"
+Drag "12DavsofDeals"
+Drop "image0006"
+Click "UeGiftCard"

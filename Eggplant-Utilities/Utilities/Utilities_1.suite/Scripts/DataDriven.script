@@ -1,0 +1,81 @@
+﻿put("one","two","three") into G_list
+log the number of items of G_list
+log item 2 of G_list
+
+
+put file ResourcePath("Eggplant.txt") into fileinfo
+
+
+log fileinfo
+log the number of lines of fileinfo
+log line 2 of fileinfo
+put the number of lines of fileinfo into fileinfo_line_count
+log 2 of fileinfo
+
+
+
+put file ResourcePath("Eggplant.txt") into fileinfo
+
+log line 1 of fileinfo
+
+put line 1 of fileinfo into list_1
+
+log the number of items of list_1
+
+log item 1 of List_1
+
+repeat fileinfo_line_count times
+	log line repeatIndex() of fileinfo
+end repeat
+
+put 1 into count
+repeat 5 times
+	log line count of fileinfo
+	put count +1 into count
+end repeat
+
+//CSV file 
+put file ResourcePath("datafile.csv") into CSV_File
+
+log CSV_file
+put item 1 of line 1 of CSV_file into data1
+
+log item 1 of line 1 of data1
+
+
+//how to fetech no. of lines in CSV
+put file ResourcePath("datafile.csv") into CSV_File
+put (the number of lines of CSV_file)-1 into CSV_count
+
+repeat CSV_count times
+	
+	put line (repeatindex()+1) of CSV_file into patient
+	put the number of items of patient into Prop_Count
+	
+	repeat prop_count times
+		log item repeatIndex() of patient
+	end repeat
+end repeat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
